@@ -74,7 +74,7 @@
 .label3 {
     font-size: 16px;
     letter-spacing: 0.4px;
-    color: #FF4858;
+    color: black;
 }
 
 .originalPrice {
@@ -103,19 +103,19 @@
 }
 
 .cart__btn {
-    background-color: white;
+    background-color: yellow;
     border: 1px solid black;
     border-radius: 4px;
 }
 
 .cart__btn:hover {
-    background-color: #F6F7F8;
+    background-color: green;
     transition: 0.3s;
 }
 
 .buy__btn {
     color: white;
-    background-color: #FF4858;
+    background-color: green;
     border-radius: 4px;
 
 }

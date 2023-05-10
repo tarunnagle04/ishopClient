@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { cartContext } from "../App";
-import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 const ImageCard = ({type,id,category,name,image,originalPrice,discountedPrice}) => {
@@ -17,18 +16,7 @@ const ImageCard = ({type,id,category,name,image,originalPrice,discountedPrice}) 
     }
 
     if(cart.cartDetails[id]){
-      toast.info('Product Alreast Exists', {
-        position: "bottom-left",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-        style: {backgroundColor : "#F5F7FA;"}
-        });
-        return;
+ 
     }
     cart.setCartDetails(prevState =>{
       const newState  = {...prevState};
@@ -36,17 +24,7 @@ const ImageCard = ({type,id,category,name,image,originalPrice,discountedPrice}) 
       return newState;
     });
     
-    toast.success('Product Added to Cart Successfully', {
-      position: "bottom-left",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-      style: {backgroundColor : "#FF4858"}
-      });
+ 
   }
 
   const buyProductHandler = () =>{
